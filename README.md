@@ -1,6 +1,6 @@
 # Plants Shopping UIX
 
-![alt](final-preview.gif)
+![preview](final-preview.gif)
 
 ✨ Live on [CodePen](https://codepen.io/AbubakerSaeed/full/poEMOXd) | [Twitter](https://twitter.com/AbubakerSaeed96/status/1354301100594245632)
 
