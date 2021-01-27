@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Plants Shopping UI and UX (using CSS Grid & GreenSock's FLIP)</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+
+  <body>
+
+    <!--
+
+      Responsive Plants Shopping UI and UX
+      ------------------------------------
+
+      Designed and developed by yours truly. Please do tell me what you think about this project (especially UX), I'd really appreciate any type of feedback — It means a lot to me, and Thank you for viewing! Also, give me a follow on Twitter (@AbubakerSaeed96) ...I might write an article about how I've done the animations (UX).
+
+      If you're looking for a front-end developer, I'm open to freelance/full-time opportunities 👋🏻 Say hi at abubaker.saeed.1996@gmail.com
+
+     -->
+
+    <!-- PAGE -->
+    <!-- ------------------------------------------------- -->
+    <div class="page">
+
+      <!-- HEADER -->
+      <!-- ------------------------------------------------- -->
+      <header class="header">
+        <div class="header__logo-container">
+          <a href="https://abubakersaeed.com" target="_blank" class="header__logo"></a>
+        </div>
+        <div class="header__links">
+          <a href="#" class="header__link">New-In</a>
+          <a href="#" class="header__link">Decorated</a>
+          <a href="#" class="header__link">Customize</a>
+          <a href="#" class="header__link">Sale</a>
+        </div>
+        <div class="header__search-container">
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 19.5C15.4183 19.5 19 15.9183 19 11.5C19 7.08172 15.4183 3.5 11 3.5C6.58172 3.5 3 7.08172 3 11.5C3 15.9183 6.58172 19.5 11 19.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M21 21.5L16.65 17.15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <input class="header__search" type="text" placeholder="Search">
+        </div>
+        <div class="header__user">
+          <a class="header__loved" href="#">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.84 5.11C20.3292 4.599 19.7228 4.19365 19.0554 3.91708C18.3879 3.64052 17.6725 3.49817 16.95 3.49817C16.2275 3.49817 15.5121 3.64052 14.8446 3.91708C14.1772 4.19365 13.5708 4.599 13.06 5.11L12 6.17L10.94 5.11C9.90831 4.07831 8.50903 3.49871 7.05 3.49871C5.59097 3.49871 4.19169 4.07831 3.16 5.11C2.12831 6.14169 1.54871 7.54097 1.54871 9C1.54871 10.459 2.12831 11.8583 3.16 12.89L4.22 13.95L12 21.73L19.78 13.95L20.84 12.89C21.351 12.3792 21.7564 11.7728 22.0329 11.1054C22.3095 10.4379 22.4518 9.72249 22.4518 9C22.4518 8.27751 22.3095 7.5621 22.0329 6.89464C21.7564 6.22719 21.351 5.62076 20.84 5.11V5.11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="header__cart" href="#">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 2.5V6.5H3V20.5C3 21.0304 3.21071 21.5391 3.58579 21.9142C3.96086 22.2893 4.46957 22.5 5 22.5H19C19.5304 22.5 20.0391 22.2893 20.4142 21.9142C20.7893 21.5391 21 21.0304 21 20.5V6.5H17V2.5H7Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M3 6.5H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="header__profile" href="#"></a>
+        </div>
+      </header>
+
+      <!-- SIDEBAR -->
+      <!-- ------------------------------------------------- -->
+      <div class="sidebar">
+        <h2 class="sidebar__title">Plants (354)</h2>
+
+        <div class="sidebar__category">
+          <div class="sidebar__heading">Type <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg></div>
+          <div class="sidebar__options">
+            <label class="check">
+              <input type="checkbox" class="check__input">
+              <span class="check__checkbox">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 6.5L9 17.5L4 12.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <p class="check__text">Gift</p>
+            </label>
+            <label class="check">
+              <input type="checkbox" class="check__input">
+              <span class="check__checkbox">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 6.5L9 17.5L4 12.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <p class="check__text">Indoor</p>
+            </label>
+            <label class="check">
+              <input type="checkbox" class="check__input">
+              <span class="check__checkbox">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 6.5L9 17.5L4 12.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <p class="check__text">Outdoor</p>
+            </label>
+          </div>
+        </div>
+
+        <div class="sidebar__category">
+          <div class="sidebar__heading">Size (3) <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg></div>
+          <div class="sidebar__options">
+            <label class="check">
+              <input type="checkbox" class="check__input" checked>
+              <span class="check__checkbox">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 6.5L9 17.5L4 12.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <p class="check__text">Small</p>
+            </label>
+            <label class="check">
+              <input type="checkbox" class="check__input" checked>
+              <span class="check__checkbox">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 6.5L9 17.5L4 12.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <p class="check__text">Medium</p>
+            </label>
+            <label class="check">
+              <input type="checkbox" class="check__input" checked>
+              <span class="check__checkbox">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 6.5L9 17.5L4 12.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <p class="check__text">Large</p>
+            </label>
+          </div>
+        </div>
+
+        <div class="sidebar__category">
+          <div class="sidebar__heading">Color <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg></div>
+          <div class="sidebar__options">
+            <div class="color" style="--hue: 0deg"></div>
+            <div class="color" style="--hue: 30deg"></div>
+            <div class="color" style="--hue: 60deg"></div>
+            <div class="color" style="--hue: 90deg"></div>
+            <div class="color" style="--hue: 120deg"></div>
+            <div class="color" style="--hue: 150deg"></div>
+            <div class="color" style="--hue: 180deg"></div>
+            <div class="color" style="--hue: 210deg"></div>
+            <div class="color" style="--hue: 240deg"></div>
+            <div class="color" style="--hue: 270deg"></div>
+            <div class="color" style="--hue: 300deg"></div>
+            <div class="color" style="--hue: 330deg"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN -->
+      <!-- ------------------------------------------------- -->
+      <div class="main">
+
+        <!-- PLANTS -->
+        <!-- ------------------------------------------------- -->
+        <h2 class="main__title">Plants (354)</h2>
+
+        <!-- FILTERS -->
+        <!-- ------------------------------------------------- -->
+        <div class="filters">
+          <button class="filters__btn"><span class="show">Show</span><span class="hide">Hide</span>&nbsp;Filters <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="black">
+              <path d="M3 8L21 8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M3 17H21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M17 5L17 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8 14L8 20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <button class="filters__btn filters__btn--sort">Sort By <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="black">
+              <path d="M6 9.5L12 15.5L18 9.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- ITEMS -->
+        <!-- ------------------------------------------------- -->
+        <div class="items">
+          <div class="item">
+            <div class="item__position">
+              <img src="https://raw.githubusercontent.com/AbubakerSaeed/plants-shopping-uix/main/assets/1.png" alt="Plant 1" class="item__image item__image--hue">
+            </div>
+            <div class="item__detail">
+              <p>Plant 1</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__position">
+              <img src="https://raw.githubusercontent.com/AbubakerSaeed/plants-shopping-uix/main/assets/2.png" alt="Plant 2" class="item__image item__image--hue">
+            </div>
+            <div class="item__detail">
+              <p>Plant 2</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__position">
+              <img src="https://raw.githubusercontent.com/AbubakerSaeed/plants-shopping-uix/main/assets/3.png" alt="Plant 3" class="item__image">
+            </div>
+            <div class="item__detail">
+              <p>Plant 3</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__position">
+              <img src="https://raw.githubusercontent.com/AbubakerSaeed/plants-shopping-uix/main/assets/4.png" alt="Plant 4" class="item__image item__image--hue">
+            </div>
+            <div class="item__detail">
+              <p>Plant 4</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__position">
+              <img src="https://raw.githubusercontent.com/AbubakerSaeed/plants-shopping-uix/main/assets/5.png" alt="Plant 5" class="item__image item__image--hue">
+            </div>
+            <div class="item__detail">
+              <p>Plant 5</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__position">
+              <img src="https://raw.githubusercontent.com/AbubakerSaeed/plants-shopping-uix/main/assets/6.png" alt="Plant 6" class="item__image">
+            </div>
+            <div class="item__detail">
+              <p>Plant 6</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__position">
+              <img src="https://raw.githubusercontent.com/AbubakerSaeed/plants-shopping-uix/main/assets/7.png" alt="Plant 7" class="item__image">
+            </div>
+            <div class="item__detail">
+              <p>Plant 7</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__position">
+              <img src="https://raw.githubusercontent.com/AbubakerSaeed/plants-shopping-uix/main/assets/8.png" alt="Plant 8" class="item__image item__image--hue">
+            </div>
+            <div class="item__detail">
+              <p>Plant 8</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__position">
+              <img src="https://raw.githubusercontent.com/AbubakerSaeed/plants-shopping-uix/main/assets/9.png" alt="Plant 9" class="item__image">
+            </div>
+            <div class="item__detail">
+              <p>Plant 9</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__position">
+              <img src="https://raw.githubusercontent.com/AbubakerSaeed/plants-shopping-uix/main/assets/10.png" alt="Plant 10" class="item__image">
+            </div>
+            <div class="item__detail">
+              <p>Plant 10</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__position">
+              <img src="https://raw.githubusercontent.com/AbubakerSaeed/plants-shopping-uix/main/assets/11.png" alt="Plant 11" class="item__image item__image--hue">
+            </div>
+            <div class="item__detail">
+              <p>Plant 11</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__position">
+              <img src="https://raw.githubusercontent.com/AbubakerSaeed/plants-shopping-uix/main/assets/12.png" alt="Plant 12" class="item__image item__image--hue">
+            </div>
+            <div class="item__detail">
+              <p>Plant 12</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__position">
+              <img src="https://raw.githubusercontent.com/AbubakerSaeed/plants-shopping-uix/main/assets/5.png" alt="Plant 13" class="item__image">
+            </div>
+            <div class="item__detail">
+              <p>Plant 13</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__position">
+              <img src="https://raw.githubusercontent.com/AbubakerSaeed/plants-shopping-uix/main/assets/3.png" alt="Plant 14" class="item__image item__image--hue">
+            </div>
+            <div class="item__detail">
+              <p>Plant 14</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item__position">
+              <img src="https://raw.githubusercontent.com/AbubakerSaeed/plants-shopping-uix/main/assets/1.png" alt="Plant 15" class="item__image">
+            </div>
+            <div class="item__detail">
+              <p>Plant 15</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGINATION -->
+        <!-- ------------------------------------------------- -->
+        <div>
+          <div class="pagination__page">Page 1 of 24</div>
+          <div class="pagination__links">
+            <a href="#" class="pagination__link">
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: var(--s)" stroke="black">
+                <path d="M19 12.5H5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 19.5L5 12.5L12 5.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg> Previous Page
+            </a>
+            <a href="#" class="pagination__link">Next Page <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: var(--s)" stroke="black">
+                <path d="M5 12.5H19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 5.5L19 12.5L12 19.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- BASKET -->
+        <!-- ------------------------------------------------- -->
+        <div class="basket">
+          <div class="basket__list">
+          </div>
+          <button class="basket__btn"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12.5H19" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M12 5.5L19 12.5L12 19.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- FOOTER -->
+      <!-- ------------------------------------------------- -->
+      <footer class="footer">
+        <p class="footer__made-by">Built with <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.84 5.11C20.3292 4.599 19.7228 4.19365 19.0554 3.91708C18.3879 3.64052 17.6725 3.49817 16.95 3.49817C16.2275 3.49817 15.5121 3.64052 14.8446 3.91708C14.1772 4.19365 13.5708 4.599 13.06 5.11L12 6.17L10.94 5.11C9.90831 4.07831 8.50903 3.49871 7.05 3.49871C5.59097 3.49871 4.19169 4.07831 3.16 5.11C2.12831 6.14169 1.54871 7.54097 1.54871 9C1.54871 10.459 2.12831 11.8583 3.16 12.89L4.22 13.95L12 21.73L19.78 13.95L20.84 12.89C21.351 12.3792 21.7564 11.7728 22.0329 11.1054C22.3095 10.4379 22.4518 9.72249 22.4518 9C22.4518 8.27751 22.3095 7.5621 22.0329 6.89464C21.7564 6.22719 21.351 5.62076 20.84 5.11V5.11Z" />
+          </svg> by <a href="https://abubakersaeed.com" target="__blank">Abubaker Saeed</a></p>
+        <div class="footer__social">
+          <a href="https://twitter.com/AbubakerSaeed96" class="footer__link" target="__blank"><svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 1.79rem">
+              <path d="M23 1.5C22.0424 2.17548 20.9821 2.69211 19.86 3.03C19.2577 2.33751 18.4573 1.84669 17.567 1.62393C16.6767 1.40116 15.7395 1.4572 14.8821 1.78445C14.0247 2.11171 13.2884 2.6944 12.773 3.45372C12.2575 4.21303 11.9877 5.11234 12 6.03V7.03C10.2426 7.07557 8.50127 6.68581 6.93101 5.89545C5.36074 5.10508 4.01032 3.93864 3 2.5C3 2.5 -1 11.5 8 15.5C5.94053 16.898 3.48716 17.5989 1 17.5C10 22.5 21 17.5 21 6C20.9991 5.72145 20.9723 5.44359 20.92 5.17C21.9406 4.16349 22.6608 2.89271 23 1.5V1.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="https://codepen.io/AbubakerSaeed" class="footer__link" target="__blank"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2.5L22 9V16L12 22.5L2 16V9L12 2.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M12 22.5V16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M22 9L12 16L2 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 16L12 9L22 16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M12 2.5V9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="https://dribbble.com/AbubakerSaeed" class="footer__link" target="__blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.66 6.98C19.7874 5.46773 18.5315 4.21221 17.019 3.34C15.486 2.447 13.813 2 12 2C10.187 2 8.514 2.447 6.98 3.34C5.447 4.233 4.233 5.447 3.34 6.98C2.447 8.513 2 10.187 2 12C2 13.813 2.446 15.487 3.34 17.02C4.21232 18.5325 5.46825 19.7881 6.981 20.66C8.514 21.553 10.187 22 12 22C13.813 22 15.486 21.553 17.02 20.66C18.5325 19.7878 19.7884 18.5323 20.661 17.02C21.554 15.487 22 13.813 22 12C22 10.187 21.554 8.513 20.66 6.98ZM12 3.66C14 3.66 15.772 4.3 17.32 5.579C16.4 6.753 15.034 7.719 13.22 8.479C12.218 6.666 11.132 5.152 9.959 3.939C10.6238 3.75518 11.3103 3.66135 12 3.66V3.66ZM5.51 6.8C6.24124 5.87143 7.16646 5.11377 8.221 4.58C9.433 5.781 10.546 7.28 11.561 9.08C9.561 9.68 7.447 9.98 5.22 9.98C4.647 9.98 4.214 9.967 3.92 9.94C4.22648 8.79438 4.76795 7.72506 5.51 6.8V6.8ZM3.66 12C3.66 11.946 3.663 11.88 3.67 11.8C3.677 11.72 3.68 11.654 3.68 11.6C3.934 11.614 4.321 11.62 4.841 11.62C7.507 11.62 9.987 11.253 12.28 10.52C12.467 10.893 12.661 11.313 12.86 11.78C11.54 12.073 10.186 12.786 8.799 13.92C7.412 15.054 6.4 16.247 5.76 17.5C4.36 15.913 3.66 14.08 3.66 12V12ZM12 20.34C10.106 20.34 8.406 19.753 6.899 18.581C7.5 17.394 8.423 16.259 9.67 15.18C10.916 14.1 12.153 13.427 13.38 13.16C14.154 15.299 14.6775 17.5205 14.94 19.78C14.0029 20.1462 13.0061 20.336 12 20.34V20.34ZM19.08 16.38C18.4255 17.4345 17.5441 18.3299 16.5 19.001C16.26 16.921 15.8 14.894 15.121 12.92C16.053 12.854 16.886 12.82 17.621 12.82C18.42 12.82 19.307 12.854 20.28 12.92C20.1495 14.1498 19.739 15.3334 19.08 16.38ZM17.84 11.38C16.68 11.38 15.607 11.427 14.62 11.52C14.4109 10.9728 14.1841 10.4325 13.94 9.9C16.006 8.994 17.472 7.894 18.339 6.6C19.539 8.014 20.193 9.627 20.299 11.44C19.487 11.4 18.667 11.38 17.84 11.38V11.38Z" fill="black" />
+            </svg>
+          </a>
+          <a href="https://github.com/AbubakerSaeed/plants-shopping-uix" class="footer__link" target="__blank"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0)">
+                <path d="M16 22.5V18.63C16.0375 18.1532 15.9731 17.6738 15.811 17.2238C15.6489 16.7738 15.3929 16.3634 15.06 16.02C18.2 15.67 21.5 14.48 21.5 9.02C21.4997 7.62383 20.9627 6.2812 20 5.27C20.4559 4.04851 20.4236 2.69835 19.91 1.5C19.91 1.5 18.73 1.15 16 2.98C13.708 2.35882 11.292 2.35882 9 2.98C6.27 1.15 5.09 1.5 5.09 1.5C4.57638 2.69835 4.54414 4.04851 5 5.27C4.03013 6.2887 3.49252 7.64346 3.5 9.05C3.5 14.47 6.8 15.66 9.94 16.05C9.611 16.39 9.35726 16.7954 9.19531 17.2399C9.03335 17.6844 8.96681 18.1581 9 18.63V22.5M9 19.5C4 21 4 17 2 16.5L9 19.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+        <p class="footer__credits">
+          Animations are made using <a href="https://greensock.com/" target="__blank">GreenSock's</a> FLIP, Plants vectors are from <a href="https://blush.design/" target="__blank">Blush</a>, and
+          UI inspiration from <a href="https://www.nike.com/" target="__blank">Nike</a>.
+        </p>
+      </footer>
+
+    </div>
+
+    <!-- SCRIPT -->
+    <!-- ------------------------------------------------- -->
+    <script src="./js/script.js"></script>
+
+  </body>
+
+</html>
